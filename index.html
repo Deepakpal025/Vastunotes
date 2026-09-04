@@ -1008,7 +1008,7 @@ footer .foot-links a:hover{color:var(--gold-300);opacity:1;}
 /* ============================================================
    CONFIG — EDIT HERE
 ============================================================ */
-const PAYMENT_LINK  = "PASTE_PAYMENT_LINK_HERE";
+const PAYMENT_LINK  = "https://superprofile.bio/vp/vastu-notes-%E2%80%93-complete-guide-for-ghar--family--career---shaadi";
 const DEMO_PDF       = "assets/pdf/demo.pdf";
 
 /* Countdown mode:
@@ -1022,7 +1022,7 @@ const COUNTDOWN_MINUTES = 5;                             // used only when COUNT
 document.querySelectorAll('.js-buy').forEach(el=>{
   el.setAttribute('href', PAYMENT_LINK);
   el.addEventListener('click', function(e){
-    if(!PAYMENT_LINK || PAYMENT_LINK === "PASTE_PAYMENT_LINK_HERE"){
+    if(!PAYMENT_LINK || PAYMENT_LINK === "https://superprofile.bio/vp/vastu-notes-%E2%80%93-complete-guide-for-ghar--family--career---shaadi"){
       e.preventDefault();
       alert('कृपया पहले PAYMENT_LINK को अपने असली payment link से बदलें (index.html की JavaScript config में).');
     }
