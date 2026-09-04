@@ -1,0 +1,9 @@
+Place these files in this folder (exact names):
+book-cover.jpg
+preview-1.jpg
+preview-2.jpg
+preview-3.jpg
+
+Optional (not required — CSS already builds these visuals):
+vastu-table.png
+rashi-wheel.png

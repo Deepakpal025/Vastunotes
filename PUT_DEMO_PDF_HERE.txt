@@ -1,0 +1,2 @@
+Place your demo PDF here, named exactly:
+demo.pdf
