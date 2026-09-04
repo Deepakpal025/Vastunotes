@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vastu Notes | Premium Vastu Book — ₹249 Limited Time Offer</title>
+<meta name="description" content="Vastu Notes की premium digital book. Limited time offer में ₹4,999 की book सिर्फ ₹249 में.">
+
+<meta property="og:title" content="Vastu Notes | Premium Vastu Book — ₹249 Limited Time Offer">
+<meta property="og:description" content="Vastu Notes की premium digital book. Limited time offer में ₹4,999 की book सिर्फ ₹249 में.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/book-cover.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%230B3D2E'/%3E%3Ccircle cx='50' cy='50' r='46' fill='none' stroke='%23C9A344' stroke-width='3'/%3E%3Ctext x='50' y='64' font-size='50' text-anchor='middle' fill='%23C9A344' font-family='serif'%3EV%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   VASTU NOTES — Design tokens
+   ============================================================ */
+:root{
+  --emerald-950:#0A2B21;
+  --emerald-900:#0D3B2C;
+  --emerald-700:#155A40;
+  --emerald-600:#1D6E4F;
+  --gold-600:#B8923A;
+  --gold-500:#C9A344;
+  --gold-300:#E4C878;
+  --gold-100:#F4E7C3;
+  --cream-50:#FBF7EE;
+  --cream-100:#F4EEDD;
+  --cream-200:#EBE1C7;
+  --ink-900:#1C2620;
+  --ink-700:#3A463E;
+  --white:#FFFFFF;
+
+  --font-display:'Rozha One', 'Noto Serif Devanagari', serif;
+  --font-body:'Mukta', 'Noto Sans Devanagari', sans-serif;
+
+  --shadow-soft:0 10px 30px rgba(13,59,44,0.12);
+  --shadow-deep:0 24px 60px rgba(10,43,33,0.28);
+  --radius-lg:20px;
+  --radius-md:14px;
+  --radius-sm:8px;
+
+  --ease:cubic-bezier(.22,.9,.32,1);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--ink-900);
+  background:var(--cream-50);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+.container{
+  width:100%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:0 20px;
+}
+h1,h2,h3{
+  font-family:var(--font-display);
+  font-weight:400;
+  line-height:1.15;
+  margin:0;
+  color:var(--emerald-950);
+}
+p{line-height:1.7;margin:0;}
+
+.eyebrow-line{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:.02em;color:var(--gold-600);
+  font-weight:600;margin-bottom:14px;
+}
+.eyebrow-line::before{
+  content:"";width:26px;height:1px;background:var(--gold-500);
+}
+
+/* ---------- reveal ---------- */
+[data-reveal]{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
+}
+[data-reveal].is-visible{opacity:1;transform:none;}
+[data-reveal="scale"]{transform:scale(.94);}
+[data-reveal="scale"].is-visible{transform:scale(1);}
+[data-reveal="left"]{transform:translateX(-32px);}
+[data-reveal="left"].is-visible{transform:none;}
+[data-reveal="right"]{transform:translateX(32px);}
+[data-reveal="right"].is-visible{transform:none;}
+
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1 !important;transform:none !important;transition:none !important;}
+  *{animation-duration:0.001s !important; animation-iteration-count:1 !important;}
+}
+
+/* ============================================================
+   1. ANNOUNCEMENT BAR
+   ============================================================ */
+.announce-bar{
+  background:linear-gradient(90deg,var(--emerald-950),var(--emerald-700) 50%,var(--emerald-950));
+  color:var(--cream-100);
+  text-align:center;
+  font-size:13px;
+  font-weight:600;
+  padding:9px 16px;
+  letter-spacing:.01em;
+  position:sticky;
+  top:0;
+  z-index:60;
+  border-bottom:1px solid var(--gold-500);
+  animation:barDown .6s var(--ease) both;
+}
+.announce-bar strong{color:var(--gold-300);font-weight:800;}
+@keyframes barDown{from{transform:translateY(-100%);}to{transform:translateY(0);}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(ellipse 900px 500px at 85% -10%, rgba(201,163,68,.16), transparent 60%),
+    radial-gradient(ellipse 700px 500px at -10% 110%, rgba(201,163,68,.10), transparent 60%),
+    var(--cream-50);
+  padding:56px 0 60px;
+  overflow:hidden;
+}
+.hero .container{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:48px;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+.hero-mandala{
+  position:absolute;
+  top:-120px;right:-160px;
+  width:520px;height:520px;
+  border-radius:50%;
+  border:1px solid rgba(201,163,68,.35);
+  z-index:0;
+}
+.hero-mandala::before,.hero-mandala::after{
+  content:"";position:absolute;inset:60px;
+  border-radius:50%;border:1px solid rgba(201,163,68,.25);
+}
+.hero-mandala::after{inset:120px;}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--emerald-950);
+  color:var(--gold-200,var(--gold-300));
+  font-size:12.5px;font-weight:600;
+  padding:7px 14px;border-radius:100px;
+  border:1px solid var(--gold-500);
+  margin-bottom:20px;
+  animation:fadeUp .7s var(--ease) .1s both;
+}
+.hero h1{
+  font-size:clamp(32px,5vw,54px);
+  animation:fadeUp .7s var(--ease) .18s both;
+  max-width:11.5ch;
+}
+.hero .subhead{
+  margin-top:16px;
+  font-size:17px;
+  color:var(--ink-700);
+  max-width:46ch;
+  animation:fadeUp .7s var(--ease) .3s both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+
+.price-block{
+  margin-top:28px;
+  display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;
+  animation:fadeUp .7s var(--ease) .42s both;
+}
+.price-old{
+  font-family:var(--font-display);
+  font-size:22px;color:#8B7355;position:relative;opacity:.75;
+}
+.price-old::after{
+  content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2px;
+  background:#B33A3A;transform:rotate(-6deg);
+}
+.price-new{
+  font-family:var(--font-display);
+  font-size:clamp(40px,6vw,60px);
+  color:var(--emerald-950);
+  position:relative;
+  background:linear-gradient(100deg,var(--gold-600) 20%,var(--gold-300) 42%,var(--gold-600) 60%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  animation:shimmer 5.5s linear infinite;
+}
+@keyframes shimmer{0%{background-position:220% 0;}100%{background-position:-40% 0;}}
+.price-note{font-size:13px;color:var(--gold-600);font-weight:700;}
+
+.cta-row{
+  margin-top:26px;
+  display:flex;gap:14px;flex-wrap:wrap;
+  animation:fadeUp .7s var(--ease) .55s both;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:16px 26px;
+  border-radius:100px;
+  font-weight:700;font-size:15.5px;
+  transition:transform .28s var(--ease), box-shadow .28s var(--ease);
+  position:relative;
+  overflow:hidden;
+  min-height:52px;
+}
+.btn-primary{
+  background:linear-gradient(180deg,var(--emerald-600),var(--emerald-950));
+  color:var(--cream-50);
+  box-shadow:0 10px 26px rgba(13,59,44,.35);
+  animation:pulseBtn 4.5s ease-in-out infinite;
+}
+.btn-primary::before{
+  content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-20deg);
+  animation:shine 3.2s ease-in-out infinite;
+}
+@keyframes shine{0%{left:-60%;}45%{left:120%;}100%{left:120%;}}
+@keyframes pulseBtn{0%,88%,100%{transform:scale(1);}92%{transform:scale(1.03);}96%{transform:scale(1);}}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(13,59,44,.42);}
+.btn-primary:active{transform:translateY(0) scale(.98);}
+.btn-secondary{
+  background:var(--white);
+  color:var(--emerald-900);
+  border:1.5px solid var(--emerald-900);
+}
+.btn-secondary:hover{background:var(--emerald-950);color:var(--cream-50);transform:translateY(-3px);}
+
+.trust-line{
+  margin-top:20px;font-size:13.5px;color:var(--ink-700);
+  display:flex;gap:8px;align-items:center;flex-wrap:wrap;
+  animation:fadeUp .7s var(--ease) .68s both;
+}
+.trust-line span:not(:last-child)::after{content:"•";margin-left:8px;color:var(--gold-500);}
+
+/* book cover */
+.book-stage{
+  position:relative;
+  display:flex;justify-content:center;align-items:center;
+  animation:fadeUp .8s var(--ease) .2s both;
+}
+.book-frame{
+  position:relative;
+  width:min(320px,78vw);
+  aspect-ratio:3/4.2;
+  border-radius:16px;
+  padding:6px;
+  background:linear-gradient(155deg,var(--gold-300),var(--gold-600) 45%,var(--gold-300));
+  box-shadow:var(--shadow-deep);
+  animation:floatY 4.6s ease-in-out infinite;
+  will-change:transform;
+}
+@keyframes floatY{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+.book-inner{
+  width:100%;height:100%;border-radius:12px;overflow:hidden;
+  background:var(--emerald-950);
+  position:relative;
+  transition:transform .5s var(--ease);
+}
+.book-frame:hover .book-inner{transform:scale(1.03) rotateY(-3deg);}
+.book-inner img{width:100%;height:100%;object-fit:cover;}
+.img-placeholder{
+  width:100%;height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+  background:
+    repeating-linear-gradient(135deg, rgba(201,163,68,.10) 0 12px, transparent 12px 24px),
+    linear-gradient(155deg,var(--emerald-950),var(--emerald-700));
+  color:var(--gold-200,var(--gold-300));
+  text-align:center;padding:22px;
+  border:1px dashed rgba(228,200,120,.5);
+  border-radius:inherit;
+}
+.img-placeholder .ph-icon{font-size:30px;}
+.img-placeholder .ph-name{font-family:monospace;font-size:12px;color:var(--gold-300);opacity:.85;}
+.img-placeholder .ph-label{font-size:13px;font-weight:600;max-width:22ch;}
+
+.book-glow{
+  position:absolute;inset:-30px;
+  background:radial-gradient(circle, rgba(201,163,68,.28), transparent 65%);
+  filter:blur(6px);
+  z-index:-1;
+  pointer-events:none;
+}
+
+@media (max-width:880px){
+  .hero .container{grid-template-columns:1fr;gap:34px;}
+  .hero{padding:36px 0 44px;}
+  .hero-order-2{order:2;}
+  .book-stage{order:1;}
+}
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+.countdown-section{
+  background:linear-gradient(180deg,var(--emerald-950),var(--emerald-900));
+  padding:44px 0;
+  text-align:center;
+  position:relative;
+}
+.countdown-section h2{
+  color:var(--cream-50);
+  font-size:clamp(22px,3.4vw,30px);
+  margin-bottom:22px;
+}
+.countdown-grid{
+  display:flex;justify-content:center;gap:14px;flex-wrap:wrap;
+}
+.countdown-unit{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(228,200,120,.35);
+  border-radius:var(--radius-md);
+  padding:16px 8px;
+  min-width:78px;
+  backdrop-filter:blur(2px);
+  transition:box-shadow .4s ease, border-color .4s ease;
+}
+.countdown-unit .num{
+  font-family:var(--font-display);
+  font-size:clamp(28px,4.6vw,42px);
+  color:var(--gold-300);
+  display:block;
+  transition:opacity .25s ease, transform .25s ease;
+}
+.countdown-unit .num.tick{opacity:0;transform:translateY(-6px);}
+.countdown-unit .lbl{
+  font-size:11.5px;color:var(--cream-200);letter-spacing:.03em;margin-top:4px;display:block;
+}
+.countdown-section.urgent .countdown-unit{
+  border-color:var(--gold-300);
+  box-shadow:0 0 22px rgba(228,200,120,.35);
+}
+.countdown-expired{
+  font-family:var(--font-display);
+  font-size:26px;color:var(--gold-300);
+}
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.section{padding:76px 0;}
+.section-cream{background:var(--cream-50);}
+.section-white{background:var(--white);}
+.section-dark{background:linear-gradient(180deg,var(--emerald-950),var(--emerald-900));color:var(--cream-100);}
+.section-dark h2{color:var(--cream-50);}
+.section-head{max-width:640px;margin:0 auto 44px;text-align:left;}
+.section-head h2{font-size:clamp(26px,3.6vw,38px);}
+.section-head p{margin-top:12px;color:var(--ink-700);font-size:15.5px;}
+.section-dark .section-head p{color:var(--cream-200);}
+
+/* ---------- features ---------- */
+.feature-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--cream-200);
+  border:1px solid var(--cream-200);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+}
+.feature-card{
+  background:var(--cream-50);
+  padding:30px 22px;
+  transition:transform .3s var(--ease), background .3s var(--ease);
+}
+.feature-card .f-icon{
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid var(--gold-500);
+  display:flex;align-items:center;justify-content:center;
+  font-size:17px;color:var(--gold-600);
+  margin-bottom:16px;
+  transition:transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+}
+.feature-card h3{
+  font-family:var(--font-body);font-weight:700;font-size:15.5px;
+  color:var(--emerald-950);margin-bottom:6px;
+}
+.feature-card p{font-size:13.5px;color:var(--ink-700);}
+@media (hover:hover){
+  .feature-card:hover{background:var(--white);transform:translateY(-6px);z-index:1;box-shadow:var(--shadow-soft);}
+  .feature-card:hover .f-icon{background:var(--gold-500);color:var(--white);transform:scale(1.08);}
+}
+@media (max-width:880px){.feature-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:480px){.feature-grid{grid-template-columns:1fr;}}
+
+/* ---------- golden table ---------- */
+.golden-wrap{
+  border-radius:var(--radius-lg);
+  padding:3px;
+  background:linear-gradient(135deg,var(--gold-300),var(--gold-600) 50%,var(--gold-300));
+  box-shadow:0 0 0 rgba(228,200,120,0);
+  transition:box-shadow .6s ease;
+}
+.golden-wrap.glow{box-shadow:0 0 44px rgba(228,200,120,.35);}
+.golden-inner{
+  background:var(--emerald-950);
+  border-radius:calc(var(--radius-lg) - 3px);
+  padding:8px;
+  overflow-x:auto;
+}
+table.vastu-table{
+  width:100%;border-collapse:collapse;min-width:640px;
+  font-size:14px;color:var(--cream-100);
+}
+.vastu-table th{
+  font-family:var(--font-display);font-weight:400;
+  color:var(--gold-300);
+  text-align:left;
+  padding:14px 16px;
+  border-bottom:1px solid rgba(228,200,120,.4);
+  font-size:15px;
+}
+.vastu-table td{
+  padding:13px 16px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  vertical-align:top;
+}
+.vastu-table tr:last-child td{border-bottom:none;}
+.vastu-table tr:hover td{background:rgba(228,200,120,.06);}
+.direction-tag{
+  font-weight:700;color:var(--gold-200,var(--gold-300));
+}
+.golden-caption{
+  margin-top:20px;font-size:14px;color:var(--ink-700);max-width:60ch;
+}
+
+/* ---------- rashi wheel ---------- */
+.rashi-section{position:relative;overflow:hidden;text-align:center;}
+.wheel-stage{
+  position:relative;
+  width:min(420px,86vw);
+  aspect-ratio:1/1;
+  margin:36px auto 0;
+}
+.wheel-glow-ring{
+  position:absolute;inset:-14px;border-radius:50%;
+  background:conic-gradient(from 0deg, transparent, rgba(228,200,120,.5), transparent 30%);
+  animation:spin 6s linear infinite;
+  filter:blur(8px);
+  opacity:.7;
+}
+.wheel-ring{
+  position:absolute;inset:0;border-radius:50%;
+  border:1px solid rgba(228,200,120,.4);
+  animation:spin 30s linear infinite;
+}
+.wheel-ring.paused{animation-play-state:paused;}
+.rashi-item{
+  position:absolute;top:50%;left:50%;
+  width:88px;height:88px;margin:-44px 0 0 -44px;
+  display:flex;align-items:center;justify-content:center;
+}
+.rashi-item .label{
+  animation:spin-rev 30s linear infinite;
+  background:var(--emerald-950);
+  color:var(--gold-200,var(--gold-300));
+  border:1px solid var(--gold-500);
+  border-radius:50%;
+  width:74px;height:74px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;
+  text-align:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.25);
+  overflow:hidden;
+  padding:6px 4px;
+}
+.rashi-item .label .rashi-img{
+  width:26px;height:26px;border-radius:50%;object-fit:cover;
+  border:1px solid rgba(228,200,120,.5);
+}
+.rashi-item .label .symbol{
+  font-size:20px;line-height:1;color:var(--gold-300);
+}
+.rashi-item .label .name{
+  font-size:10.5px;font-weight:600;line-height:1.1;
+}
+.rashi-item .label.paused{animation-play-state:paused;}
+.wheel-center{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:44%;height:44%;border-radius:50%;
+  background:radial-gradient(circle, var(--emerald-900), var(--emerald-950));
+  border:1px solid var(--gold-500);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--gold-300);
+  font-family:var(--font-display);
+  font-size:clamp(15px,2.4vw,20px);
+  line-height:1.25;
+  box-shadow:inset 0 0 24px rgba(228,200,120,.15);
+}
+@keyframes spin{from{transform:rotate(0);}to{transform:rotate(360deg);}}
+@keyframes spin-rev{from{transform:rotate(0);}to{transform:rotate(-360deg);}}
+
+/* ---------- preview gallery ---------- */
+.preview-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.preview-card{
+  border-radius:var(--radius-md);
+  overflow:hidden;
+  aspect-ratio:3/4;
+  position:relative;
+  cursor:pointer;
+  box-shadow:var(--shadow-soft);
+  transition:transform .35s var(--ease);
+}
+@media (hover:hover){.preview-card:hover{transform:translateY(-6px);}}
+.preview-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease);}
+@media (hover:hover){.preview-card:hover img{transform:scale(1.06);}}
+.preview-card .zoom-hint{
+  position:absolute;bottom:10px;right:10px;
+  background:rgba(10,43,33,.75);color:var(--gold-200,var(--gold-300));
+  font-size:11px;padding:5px 10px;border-radius:100px;
+}
+@media (max-width:700px){.preview-grid{grid-template-columns:1fr 1fr;}.preview-grid .preview-card:last-child{grid-column:span 2;}}
+
+.lightbox{
+  position:fixed;inset:0;z-index:100;
+  background:rgba(10,20,16,.9);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .3s ease;
+  padding:24px;
+}
+.lightbox.open{opacity:1;pointer-events:auto;}
+.lightbox-content{
+  max-width:520px;width:100%;
+  background:var(--cream-50);
+  border-radius:var(--radius-md);
+  padding:10px;
+  transform:scale(.9);
+  transition:transform .3s var(--ease);
+}
+.lightbox.open .lightbox-content{transform:scale(1);}
+.lightbox-close{
+  position:absolute;top:20px;right:24px;
+  color:var(--cream-50);font-size:28px;
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,.3);
+}
+
+.center-cta{text-align:center;margin-top:34px;}
+
+/* ---------- offer section ---------- */
+.offer-card{
+  background:linear-gradient(160deg,var(--emerald-950),var(--emerald-700));
+  border-radius:var(--radius-lg);
+  padding:clamp(30px,5vw,54px);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--gold-500);
+}
+.offer-card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 20% 0%, rgba(228,200,120,.16), transparent 55%);
+}
+.offer-card > *{position:relative;z-index:1;}
+.offer-card h2{color:var(--cream-50);font-size:clamp(24px,3.6vw,32px);}
+.offer-price-row{
+  display:flex;align-items:baseline;justify-content:center;gap:18px;
+  margin:26px 0 10px;flex-wrap:wrap;
+}
+.offer-old{font-family:var(--font-display);font-size:20px;color:rgba(244,238,211,.6);position:relative;}
+.offer-old::after{content:"";position:absolute;left:-2px;right:-2px;top:50%;height:2px;background:#E4A0A0;transform:rotate(-5deg);}
+.offer-new{
+  font-family:var(--font-display);font-size:clamp(44px,7vw,64px);
+  color:var(--gold-300);
+}
+.badge-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:14px 0 8px;}
+.pill{
+  display:inline-block;padding:7px 16px;border-radius:100px;
+  font-size:13px;font-weight:700;
+}
+.pill-save{background:rgba(228,200,120,.15);color:var(--gold-300);border:1px solid rgba(228,200,120,.4);}
+.pill-off{background:var(--gold-500);color:var(--emerald-950);}
+.offer-note{margin-top:18px;font-size:13.5px;color:var(--cream-200);}
+.offer-card .btn-primary{margin-top:26px;}
+
+/* ---------- why cards ---------- */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+.why-card{
+  padding:26px 20px;
+  border-left:2px solid var(--gold-500);
+  background:var(--white);
+}
+.why-card h3{font-family:var(--font-body);font-weight:700;font-size:16px;margin-bottom:8px;}
+.why-card p{font-size:13.5px;color:var(--ink-700);}
+@media (max-width:880px){.why-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:520px){.why-grid{grid-template-columns:1fr;}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:760px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--cream-200);}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;
+  padding:20px 4px;text-align:left;font-weight:700;font-size:16px;
+  color:var(--emerald-950);gap:16px;
+}
+.faq-q .arrow{
+  flex:none;width:26px;height:26px;border-radius:50%;
+  border:1px solid var(--gold-500);color:var(--gold-600);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .35s var(--ease);
+  font-size:14px;
+}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg);}
+.faq-a{
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .4s var(--ease), opacity .3s ease, padding .4s ease;
+  padding:0 4px;
+  font-size:14.5px;color:var(--ink-700);
+}
+.faq-item.open .faq-a{max-height:220px;opacity:1;padding:0 4px 20px;}
+
+/* ---------- final CTA ---------- */
+.final-cta{
+  background:var(--emerald-950);
+  color:var(--cream-50);
+  text-align:center;
+  padding:70px 0 84px;
+  position:relative;
+}
+.final-cta h2{color:var(--cream-50);font-size:clamp(28px,4.2vw,40px);}
+.final-cta p{margin-top:14px;color:var(--cream-200);font-size:16px;}
+.final-cta .price-new{font-size:clamp(40px,6vw,54px);display:block;margin:22px 0;}
+.final-cta .btn-primary{margin-top:6px;}
+.final-cta .price-note{display:block;margin-top:14px;color:var(--gold-300);}
+
+/* ---------- footer ---------- */
+footer{
+  background:var(--emerald-950);
+  border-top:1px solid rgba(228,200,120,.2);
+  padding:26px 0 90px;
+  text-align:center;
+  color:var(--cream-200);
+  font-size:13px;
+}
+footer .foot-links{display:flex;gap:18px;justify-content:center;margin-bottom:12px;flex-wrap:wrap;}
+footer .foot-links a{color:var(--cream-200);opacity:.8;}
+footer .foot-links a:hover{color:var(--gold-300);opacity:1;}
+
+/* ---------- sticky mobile cta ---------- */
+.sticky-mobile{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:70;
+  background:var(--emerald-950);
+  border-top:1px solid var(--gold-500);
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  align-items:center;justify-content:space-between;gap:12px;
+  transform:translateY(100%);
+  transition:transform .4s var(--ease), opacity .3s ease;
+  box-shadow:0 -8px 24px rgba(0,0,0,.25);
+}
+.sticky-mobile.show{transform:translateY(0);}
+.sticky-mobile.dim{opacity:.55;}
+.sticky-mobile .sm-price{color:var(--gold-300);font-family:var(--font-display);font-size:19px;}
+.sticky-mobile .sm-btn{
+  background:var(--gold-500);color:var(--emerald-950);
+  padding:12px 20px;border-radius:100px;font-weight:800;font-size:14.5px;
+  display:flex;align-items:center;gap:6px;
+  min-height:44px;
+}
+@media (max-width:700px){.sticky-mobile{display:flex;} body{padding-bottom:0;}}
+
+/* decorative floating particles (very subtle) */
+.particle{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle, rgba(228,200,120,.5), transparent 70%);
+  pointer-events:none;
+  animation:drift 14s ease-in-out infinite;
+}
+@keyframes drift{0%,100%{transform:translateY(0) translateX(0);}50%{transform:translateY(-22px) translateX(10px);}}
+
+@media (prefers-reduced-motion: reduce){
+  .book-frame,.wheel-ring,.wheel-glow-ring,.rashi-item .label,.particle,.btn-primary,.price-new{animation:none !important;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     1. ANNOUNCEMENT BAR
+============================================================ -->
+<div class="announce-bar">
+  🔥 Limited Time Offer | Vastu Notes Special Price सिर्फ <strong>₹249/-</strong>
+</div>
+
+<!-- ============================================================
+     2. HERO
+============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero-mandala" aria-hidden="true"></div>
+  <div class="container">
+    <div class="hero-order-2">
+      <span class="hero-badge">✨ Limited Time Digital Book Offer</span>
+      <h1 data-parallax="0.4">अपने घर की Vastu Energy को समझिए</h1>
+      <p class="subhead">Complete Vastu Notes — आसान भाषा में Practical Knowledge. दिशाओं, ऊर्जा और traditional Vastu ज्ञान को सरल भाषा में समझने के लिए बनाई गई एक practical digital guide.</p>
+
+      <div class="price-block">
+        <span class="price-old">₹4,999/-</span>
+        <span class="price-new">₹249/-</span>
+      </div>
+      <div class="price-note">Limited Time Offer</div>
+
+      <div class="cta-row">
+        <a href="#" class="btn btn-primary js-buy">🛒 अभी खरीदें — ₹249/-</a>
+        <a href="#" class="btn btn-secondary js-demo">📖 Free Demo देखें</a>
+      </div>
+
+      <div class="trust-line">
+        <span>Instant Digital Access</span>
+        <span>Easy to Read</span>
+        <span>Hindi + English</span>
+      </div>
+    </div>
+
+    <div class="book-stage" data-reveal="scale">
+      <div class="book-glow" aria-hidden="true" data-parallax="-0.3"></div>
+      <div class="book-frame" data-parallax="0.6">
+        <div class="book-inner">
+          <img src="assets/images/book-cover.jpg" alt="Vastu Notes — Book Cover"
+               onerror="this.replaceWith(vnPlaceholder('📕','book-cover.jpg','Book Cover यहाँ दिखेगी'))">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. URGENCY / COUNTDOWN
+============================================================ -->
+<section class="countdown-section" id="countdown-section">
+  <div class="container">
+    <h2>⏰ Limited Time Offer समाप्त होने वाला है!</h2>
+    <div class="countdown-grid" id="countdown" role="timer" aria-live="polite">
+      <div class="countdown-unit"><span class="num" data-unit="days">00</span><span class="lbl">Days</span></div>
+      <div class="countdown-unit"><span class="num" data-unit="hours">00</span><span class="lbl">Hours</span></div>
+      <div class="countdown-unit"><span class="num" data-unit="minutes">00</span><span class="lbl">Minutes</span></div>
+      <div class="countdown-unit"><span class="num" data-unit="seconds">00</span><span class="lbl">Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. WHAT YOU WILL GET
+============================================================ -->
+<section class="section section-cream" id="features">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow-line">Vastu Notes Inside</div>
+      <h2>इस Book में आपको क्या मिलेगा?</h2>
+      <p>हर topic को practical और आसान भाषा में समझाया गया है — बिना किसी अनावश्यक जटिलता के।</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" data-reveal><div class="f-icon">🧭</div><h3>Basic Concepts</h3><p>Vastu के मूल सिद्धांत आसान शब्दों में।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">🧱</div><h3>Directions & Importance</h3><p>हर दिशा का practical महत्व।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">📜</div><h3>Vastu Golden Table</h3><p>Quick reference के लिए एक सुंदर table।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">♈</div><h3>Rashi & Vastu Connection</h3><p>राशियों से जुड़ी Vastu जानकारी।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">✅</div><h3>Practical Tips</h3><p>घर में लागू करने योग्य सुझाव।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">🗣️</div><h3>Hindi + English</h3><p>दोनों भाषाओं में सरल व्याख्या।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">📝</div><h3>Revision Friendly</h3><p>Exam व revision के लिए उपयुक्त format।</p></div>
+      <div class="feature-card" data-reveal><div class="f-icon">📌</div><h3>Quick Reference</h3><p>जल्दी देखने के लिए संक्षिप्त notes।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. VASTU GOLDEN TABLE
+============================================================ -->
+<section class="section section-white" id="golden-table">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow-line">Special Reference</div>
+      <h2>✨ Vastu Golden Table</h2>
+      <p>Vastu के महत्वपूर्ण दिशाओं और उनके practical significance को एक ही जगह समझने के लिए designed reference।</p>
+    </div>
+
+    <div class="golden-wrap" data-reveal="scale" id="golden-glow-wrap">
+      <div class="golden-inner">
+        <table class="vastu-table">
+          <thead>
+            <tr><th>दिशा / Direction</th><th>तत्व / Element</th><th>प्रतीक रंग / Color</th><th>Practical Significance</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="direction-tag">उत्तर (North)</td><td>जल</td><td>हरा</td><td>धन व अवसरों से जुड़ी दिशा मानी जाती है</td></tr>
+            <tr><td class="direction-tag">पूर्व (East)</td><td>वायु</td><td>पीला</td><td>सूर्योदय व सकारात्मक ऊर्जा की दिशा</td></tr>
+            <tr><td class="direction-tag">दक्षिण (South)</td><td>अग्नि</td><td>लाल</td><td>स्थिरता व सुरक्षा से जुड़ी दिशा</td></tr>
+            <tr><td class="direction-tag">पश्चिम (West)</td><td>आकाश</td><td>नीला</td><td>स्थायित्व व दीर्घकालिक लाभ की दिशा</td></tr>
+            <tr><td class="direction-tag">ईशान (North-East)</td><td>जल</td><td>सफेद</td><td>पूजा व ध्यान के लिए शुभ मानी जाती है</td></tr>
+            <tr><td class="direction-tag">आग्नेय (South-East)</td><td>अग्नि</td><td>नारंगी</td><td>रसोई से संबंधित पारंपरिक मान्यता</td></tr>
+            <tr><td class="direction-tag">नैऋत्य (South-West)</td><td>पृथ्वी</td><td>भूरा</td><td>भारी निर्माण के लिए उपयुक्त मानी जाती है</td></tr>
+            <tr><td class="direction-tag">वायव्य (North-West)</td><td>वायु</td><td>सफेद-ग्रे</td><td>आवागमन व सहयोग से जुड़ी दिशा</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="golden-caption" data-reveal>Note: यह जानकारी पारंपरिक Vastu मार्गदर्शन पर आधारित है, इसे वैज्ञानिक दावे के रूप में प्रस्तुत नहीं किया गया है।</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. RASHI WHEEL
+============================================================ -->
+<section class="section section-dark rashi-section" id="rashi">
+  <div class="container">
+    <div class="section-head" style="margin-left:auto;margin-right:auto;text-align:center;" data-reveal>
+      <div class="eyebrow-line" style="justify-content:center;">Zodiac Reference</div>
+      <h2>♈ 12 राशियाँ • Rashi Wheel</h2>
+      <p>हर राशि से जुड़ी पारंपरिक Vastu जानकारी book में विस्तार से दी गई है।</p>
+    </div>
+
+    <div class="wheel-stage" data-reveal="scale" id="wheel-stage">
+      <div class="wheel-glow-ring" aria-hidden="true"></div>
+      <div class="wheel-ring" id="wheelRing"></div>
+      <div class="wheel-center">RASHI<br>WHEEL</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. BOOK PREVIEW
+============================================================ -->
+<section class="section section-cream" id="preview">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow-line">A Peek Inside</div>
+      <h2>Book का अंदर से एक छोटा Preview</h2>
+      <p>Sample pages देखकर आप book की quality और format का अंदाज़ा लगा सकते हैं।</p>
+    </div>
+
+    <div class="preview-grid">
+      <div class="preview-card" data-reveal data-index="1">
+        <img src="assets/images/preview-1.jpg" alt="Book preview page 1"
+             onerror="this.parentElement.replaceChild(vnPlaceholder('🖼️','preview-1.jpg','Preview Page 1'), this)">
+        <span class="zoom-hint">🔍 View</span>
+      </div>
+      <div class="preview-card" data-reveal data-index="2" style="transition-delay:.1s">
+        <img src="assets/images/preview-2.jpg" alt="Book preview page 2"
+             onerror="this.parentElement.replaceChild(vnPlaceholder('🖼️','preview-2.jpg','Preview Page 2'), this)">
+        <span class="zoom-hint">🔍 View</span>
+      </div>
+      <div class="preview-card" data-reveal data-index="3" style="transition-delay:.2s">
+        <img src="assets/images/preview-3.jpg" alt="Book preview page 3"
+             onerror="this.parentElement.replaceChild(vnPlaceholder('🖼️','preview-3.jpg','Preview Page 3'), this)">
+        <span class="zoom-hint">🔍 View</span>
+      </div>
+    </div>
+
+    <div class="center-cta" data-reveal>
+      <p style="margin-bottom:18px;color:var(--ink-700);">पूरा Content देखने के लिए Free Demo PDF देखें</p>
+      <a href="#" class="btn btn-secondary js-demo">📖 Demo PDF खोलें</a>
+    </div>
+  </div>
+</section>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close preview">✕</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<!-- ============================================================
+     8. OFFER SECTION
+============================================================ -->
+<section class="section section-cream" id="offer">
+  <div class="container">
+    <div class="offer-card" data-reveal="scale">
+      <div class="eyebrow-line" style="justify-content:center;color:var(--gold-300);">Today's Offer</div>
+      <h2>आज का Special Vastu Notes Offer</h2>
+
+      <div class="offer-price-row">
+        <span class="offer-old">₹4,999/-</span>
+        <span class="offer-new">₹249/-</span>
+      </div>
+
+      <div class="badge-row">
+        <span class="pill pill-save">Save ₹4,750</span>
+        <span class="pill pill-off">95% OFF</span>
+      </div>
+
+      <p class="offer-note">Limited Time Offer</p>
+
+      <div class="countdown-grid" id="countdown2" role="timer" aria-live="off" style="margin-top:22px;">
+        <div class="countdown-unit"><span class="num" data-unit="days">00</span><span class="lbl">Days</span></div>
+        <div class="countdown-unit"><span class="num" data-unit="hours">00</span><span class="lbl">Hours</span></div>
+        <div class="countdown-unit"><span class="num" data-unit="minutes">00</span><span class="lbl">Minutes</span></div>
+        <div class="countdown-unit"><span class="num" data-unit="seconds">00</span><span class="lbl">Seconds</span></div>
+      </div>
+
+      <a href="#" class="btn btn-primary js-buy">🔥 ₹249 में अभी खरीदें</a>
+      <p class="offer-note">Digital Product • Payment के बाद access instructions दिए जाएंगे</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. WHY VASTU NOTES
+============================================================ -->
+<section class="section section-white" id="why">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div class="eyebrow-line">Why This Book</div>
+      <h2>Why Vastu Notes</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><h3>Simple Language</h3><p>बिना जटिल शब्दों के, सीधी और स्पष्ट भाषा।</p></div>
+      <div class="why-card" data-reveal style="transition-delay:.08s"><h3>Practical Format</h3><p>रोज़मर्रा में उपयोग किए जा सकने वाले notes।</p></div>
+      <div class="why-card" data-reveal style="transition-delay:.16s"><h3>Hindi + English</h3><p>दोनों भाषाओं में सहज समझ के लिए।</p></div>
+      <div class="why-card" data-reveal style="transition-delay:.24s"><h3>Quick Reference</h3><p>ज़रूरत पड़ने पर तुरंत देखने योग्य format।</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. FAQ
+============================================================ -->
+<section class="section section-cream" id="faq">
+  <div class="container">
+    <div class="section-head" data-reveal style="text-align:center;margin-left:auto;margin-right:auto;">
+      <div class="eyebrow-line" style="justify-content:center;">FAQ</div>
+      <h2>अक्सर पूछे जाने वाले सवाल</h2>
+    </div>
+
+    <div class="faq-list" data-reveal>
+      <div class="faq-item">
+        <button class="faq-q">यह Book किस format में मिलेगी?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>यह एक Digital PDF format में उपलब्ध है, जिसे आप mobile, tablet या computer पर पढ़ सकते हैं।</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">क्या यह Digital Book है?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>हाँ, Vastu Notes एक पूरी तरह digital product है। कोई physical copy नहीं भेजी जाती।</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Demo PDF कहाँ से देख सकते हैं?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>ऊपर दिए गए "Demo PDF देखें" बटन पर क्लिक करके आप free demo PDF एक नए tab में देख सकते हैं।</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Payment कैसे करना है?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>"अभी खरीदें" बटन पर क्लिक करें, आपको secure payment page पर redirect कर दिया जाएगा।</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Payment के बाद क्या मिलेगा?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>Payment successful होने के बाद आपको access की जानकारी दी जाएगी। (Editable: यहां अपनी exact delivery process बताएं।)</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">क्या Mobile पर पढ़ सकते हैं?<span class="arrow">⌄</span></button>
+        <div class="faq-a"><p>जी हाँ, यह PDF किसी भी mobile, tablet या computer पर आसानी से पढ़ी जा सकती है।</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. FINAL CTA
+============================================================ -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Vastu Notes — आज ही शुरू करें</h2>
+    <p>Special Price ₹249/- के साथ अपनी copy अभी प्राप्त करें।</p>
+    <span class="price-new">₹249/-</span>
+    <a href="#" class="btn btn-primary js-buy">🛒 अभी खरीदें</a>
+    <span class="price-note">Limited Time Offer</span>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. FOOTER
+============================================================ -->
+<footer>
+  <div class="container">
+    <div class="foot-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+      <a href="#">Contact</a>
+    </div>
+    <p>© 2026 Vastu Notes. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- sticky mobile CTA -->
+<div class="sticky-mobile" id="stickyMobile">
+  <span class="sm-price">₹249/-</span>
+  <a href="#" class="sm-btn js-buy">अभी खरीदें →</a>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — EDIT HERE
+============================================================ */
+const PAYMENT_LINK  = "PASTE_PAYMENT_LINK_HERE";
+const DEMO_PDF       = "assets/pdf/demo.pdf";
+
+/* Countdown mode:
+   "fixed"   -> counts down to one real calendar date/time for everyone (OFFER_END_DATE below)
+   "rolling" -> every time someone opens/refreshes the site, timer restarts fresh from COUNTDOWN_MINUTES */
+const COUNTDOWN_MODE    = "rolling";
+const OFFER_END_DATE    = "2026-09-30T23:59:59+05:30"; // used only when COUNTDOWN_MODE = "fixed"
+const COUNTDOWN_MINUTES = 5;                             // used only when COUNTDOWN_MODE = "rolling"
+
+/* wire up buy / demo buttons */
+document.querySelectorAll('.js-buy').forEach(el=>{
+  el.setAttribute('href', PAYMENT_LINK);
+  el.addEventListener('click', function(e){
+    if(!PAYMENT_LINK || PAYMENT_LINK === "PASTE_PAYMENT_LINK_HERE"){
+      e.preventDefault();
+      alert('कृपया पहले PAYMENT_LINK को अपने असली payment link से बदलें (index.html की JavaScript config में).');
+    }
+  });
+});
+document.querySelectorAll('.js-demo').forEach(el=>{
+  el.setAttribute('href', DEMO_PDF);
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener');
+});
+
+/* ============================================================
+   placeholder helper for missing images
+============================================================ */
+function vnPlaceholder(icon, filename, label){
+  const div = document.createElement('div');
+  div.className = 'img-placeholder';
+  div.innerHTML = `<div class="ph-icon">${icon}</div>
+    <div class="ph-label">${label}</div>
+    <div class="ph-name">assets/images/${filename}</div>`;
+  return div;
+}
+
+/* ============================================================
+   COUNTDOWN TIMER
+============================================================ */
+(function(){
+  const targetTime = COUNTDOWN_MODE === "rolling"
+    ? Date.now() + COUNTDOWN_MINUTES * 60 * 1000   // fresh N-minute countdown on every page load
+    : new Date(OFFER_END_DATE).getTime();          // same fixed date/time for every visitor
+  const countdownSections = [document.getElementById('countdown-section')];
+  const groups = [document.getElementById('countdown'), document.getElementById('countdown2')];
+
+  function render(){
+    const now = Date.now();
+    const diff = targetTime - now;
+
+    if(diff <= 0){
+      groups.forEach(g=>{
+        if(!g) return;
+        g.innerHTML = '<div class="countdown-expired">Offer Expired</div>';
+      });
+      document.querySelectorAll('.js-buy').forEach(btn=>{
+        btn.textContent = btn.textContent.replace(/₹249\/?-?/,'').trim() || 'Contact for Price';
+      });
+      clearInterval(timerId);
+      return;
+    }
+
+    const days = Math.floor(diff/(1000*60*60*24));
+    const hours = Math.floor((diff/(1000*60*60))%24);
+    const minutes = Math.floor((diff/(1000*60))%60);
+    const seconds = Math.floor((diff/1000)%60);
+
+    const values = {days,hours,minutes,seconds};
+
+    groups.forEach(g=>{
+      if(!g) return;
+      Object.keys(values).forEach(key=>{
+        const el = g.querySelector(`[data-unit="${key}"]`);
+        if(!el) return;
+        const formatted = String(values[key]).padStart(2,'0');
+        if(el.textContent !== formatted){
+          el.classList.add('tick');
+          setTimeout(()=>{ el.textContent = formatted; el.classList.remove('tick'); }, 140);
+        }
+      });
+    });
+
+    const urgent = diff < 1000*60*60*24; // < 24h
+    countdownSections.forEach(s=>{ if(s) s.classList.toggle('urgent', urgent); });
+  }
+
+  render();
+  const timerId = setInterval(render, 1000);
+})();
+
+/* ============================================================
+   SCROLL REVEAL
+============================================================ */
+(function(){
+  const items = document.querySelectorAll('[data-reveal]');
+  if(!('IntersectionObserver' in window)){
+    items.forEach(i=>i.classList.add('is-visible'));
+    return;
+  }
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.15, rootMargin:'0px 0px -40px 0px'});
+  items.forEach(i=>io.observe(i));
+})();
+
+/* ============================================================
+   GOLDEN TABLE — glow sweep once visible
+============================================================ */
+(function(){
+  const wrap = document.getElementById('golden-glow-wrap');
+  if(!wrap) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        wrap.classList.add('glow');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.3});
+  io.observe(wrap);
+})();
+
+/* ============================================================
+   RASHI WHEEL — build 12 items
+============================================================ */
+(function(){
+  const rashis = [
+    {name:"मेष",     symbol:"♈", file:"aries.jpg"},
+    {name:"वृषभ",    symbol:"♉", file:"taurus.jpg"},
+    {name:"मिथुन",   symbol:"♊", file:"gemini.jpg"},
+    {name:"कर्क",    symbol:"♋", file:"cancer.jpg"},
+    {name:"सिंह",    symbol:"♌", file:"leo.jpg"},
+    {name:"कन्या",   symbol:"♍", file:"virgo.jpg"},
+    {name:"तुला",    symbol:"♎", file:"libra.jpg"},
+    {name:"वृश्चिक", symbol:"♏", file:"scorpio.jpg"},
+    {name:"धनु",     symbol:"♐", file:"sagittarius.jpg"},
+    {name:"मकर",     symbol:"♑", file:"capricorn.jpg"},
+    {name:"कुंभ",    symbol:"♒", file:"aquarius.jpg"},
+    {name:"मीन",     symbol:"♓", file:"pisces.jpg"}
+  ];
+  const ring = document.getElementById('wheelRing');
+  const stage = document.getElementById('wheel-stage');
+  if(!ring || !stage) return;
+
+  function buildWheel(){
+    ring.innerHTML = '';
+    const stageSize = stage.offsetWidth || 420;
+    // radius in px, keeping labels inside the ring border and clear of the center circle
+    const radius = Math.max(stageSize / 2 - 52, 58);
+
+    rashis.forEach((rashi, i) => {
+      const angle = (360 / 12) * i;
+
+      const item = document.createElement('div');
+      item.className = 'rashi-item';
+      item.style.transform = `rotate(${angle}deg) translateY(-${radius}px) rotate(${-angle}deg)`;
+
+      const label = document.createElement('div');
+      label.className = 'label';
+
+      const img = document.createElement('img');
+      img.className = 'rashi-img';
+      img.src = `assets/images/rashi/${rashi.file}`;
+      img.alt = rashi.name;
+      img.addEventListener('error', function(){
+        const fallback = document.createElement('span');
+        fallback.className = 'symbol';
+        fallback.setAttribute('aria-hidden', 'true');
+        fallback.textContent = rashi.symbol;
+        img.replaceWith(fallback);
+      }, { once:true });
+
+      const nameEl = document.createElement('span');
+      nameEl.className = 'name';
+      nameEl.textContent = rashi.name;
+
+      label.appendChild(img);
+      label.appendChild(nameEl);
+      item.appendChild(label);
+      ring.appendChild(item);
+    });
+  }
+
+  buildWheel();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(buildWheel, 150);
+  });
+
+  const labels = () => stage.querySelectorAll('.label');
+  stage.addEventListener('mouseenter', ()=>{
+    ring.classList.add('paused');
+    labels().forEach(l=>l.classList.add('paused'));
+  });
+  stage.addEventListener('mouseleave', ()=>{
+    ring.classList.remove('paused');
+    labels().forEach(l=>l.classList.remove('paused'));
+  });
+})();
+
+/* ============================================================
+   PREVIEW LIGHTBOX
+============================================================ */
+(function(){
+  const lightbox = document.getElementById('lightbox');
+  const content = document.getElementById('lightboxContent');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.preview-card').forEach(card=>{
+    card.addEventListener('click', ()=>{
+      const img = card.querySelector('img');
+      content.innerHTML = '';
+      if(img){
+        const clone = img.cloneNode(true);
+        clone.style.width = '100%';
+        clone.style.borderRadius = '10px';
+        content.appendChild(clone);
+      } else {
+        const ph = card.querySelector('.img-placeholder');
+        if(ph) content.appendChild(ph.cloneNode(true));
+      }
+      lightbox.classList.add('open');
+    });
+  });
+
+  function close(){ lightbox.classList.remove('open'); }
+  closeBtn.addEventListener('click', close);
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) close(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+})();
+
+/* ============================================================
+   FAQ ACCORDION
+============================================================ */
+(function(){
+  const items = document.querySelectorAll('.faq-item');
+  items.forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('open');
+      items.forEach(i=>i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+})();
+
+/* ============================================================
+   STICKY MOBILE CTA
+============================================================ */
+(function(){
+  const bar = document.getElementById('stickyMobile');
+  const hero = document.getElementById('hero');
+  const offer = document.getElementById('offer');
+  if(!bar || !hero) return;
+
+  const heroObserver = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      bar.classList.toggle('show', !entry.isIntersecting);
+    });
+  }, {threshold:0});
+  heroObserver.observe(hero);
+
+  if(offer){
+    const offerObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        bar.classList.toggle('dim', entry.isIntersecting);
+      });
+    }, {threshold:0.5});
+    offerObserver.observe(offer);
+  }
+})();
+
+/* ============================================================
+   MOUSE PARALLAX — desktop only, respects reduced motion
+============================================================ */
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isDesktop = window.matchMedia('(min-width: 881px)').matches && window.matchMedia('(hover:hover)').matches;
+  if(reduce || !isDesktop) return;
+
+  const hero = document.getElementById('hero');
+  if(!hero) return;
+  const items = hero.querySelectorAll('[data-parallax]');
+
+  hero.addEventListener('mousemove', (e)=>{
+    const rect = hero.getBoundingClientRect();
+    const cx = (e.clientX - rect.left) / rect.width - 0.5;
+    const cy = (e.clientY - rect.top) / rect.height - 0.5;
+    items.forEach(el=>{
+      const strength = parseFloat(el.getAttribute('data-parallax')) || 0.3;
+      const max = 8; // px
+      const x = cx * max * strength;
+      const y = cy * max * strength;
+      el.style.transform = (el.style.transform.includes('translateY') ? '' : '') + ` translate(${x}px, ${y}px)`;
+    });
+  });
+})();
+
+/* ============================================================
+   PRICE / SAVINGS BADGE POP — offer section entrance
+============================================================ */
+(function(){
+  const offer = document.getElementById('offer');
+  if(!offer) return;
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        offer.querySelectorAll('.pill').forEach((p,i)=>{
+          p.style.animation = `fadeUp .5s var(--ease) ${i*0.12+0.1}s both`;
+        });
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.4});
+  io.observe(offer);
+})();
+
+/* ============================================================
+   PAGE LOAD FADE
+============================================================ */
+document.documentElement.style.opacity = '0';
+window.addEventListener('DOMContentLoaded', ()=>{
+  document.documentElement.style.transition = 'opacity .5s ease';
+  requestAnimationFrame(()=>{ document.documentElement.style.opacity = '1'; });
+});
+</script>
+</body>
+</html>
